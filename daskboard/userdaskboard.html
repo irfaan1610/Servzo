@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ServZo</title>
+    <link rel="shortcut icon" href="../images/servzoimg/logi.jpg" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fc;
+    }
+    .sidebar {
+      height: 100vh;
+      background-color: #4e73df;
+      padding: 2rem 1rem;
+      color: white;
+      position: fixed;
+      width: 250px;
+    }
+    .sidebar h4 {
+      font-weight: bold;
+    }
+    .sidebar a {
+      color: white;
+      display: block;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      color: #ffc107;
+    }
+    .main {
+      margin-left: 270px;
+      padding: 2rem;
+    }
+    .btn-group .btn {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4 class="mb-4">Servzo</h4>
+    <a href="../Services1.html"><i class="fas fa-list"></i> View Services</a>
+    <a href="userbooking.html"><i class="fas fa-calendar-check"></i> My Bookings</a>
+    <a href="providers.html"><i class="fas fa-calendar-check"></i> Providers</a>
+    <a href="userfeedback.html"><i class="fas fa-star"></i> Feedback</a>
+    <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main container-fluid">
+    <h2 class="mb-4">Welcome Back, Customer!</h2>
+
+    <!-- Action Buttons -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+      <h4 class="mb-0">Your Bookings</h4>
+      <div class="btn-group">
+        <button class="btn btn-primary"><i class="fas fa-plus"></i> New Booking</button>
+        <button class="btn btn-outline-secondary"><i class="fas fa-filter"></i> Filter</button>
+        <button class="btn btn-outline-success"><i class="fas fa-file-export"></i> Export</button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle bg-white shadow rounded">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Provider</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody id="bookingTableBody">
+          <tr><td colspan="5" class="text-center">Loading bookings...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<footer class="py-3 bg-dark text-white text-center fixed-bottom">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- Fetch Bookings Script -->
+<script>
+  fetch("http://localhost/servzo/fetch_bookings.php")
+    .then(res => res.json())
+    .then(data => {
+      const tbody = document.getElementById("bookingTableBody");
+      tbody.innerHTML = "";
+
+      data.forEach(row => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${row.service}</td>
+          <td>${row.provider}</td>
+          <td>${row.booking_date}</td>
+          <td>${row.booking_time}</td>
+          <td><span class="badge ${getStatusClass(row.status)}">${row.status}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    });
+
+  function getStatusClass(status) {
+    switch (status) {
+      case "Completed": return "bg-success";
+      case "Pending": return "bg-warning text-dark";
+      case "Cancelled": return "bg-danger";
+      default: return "bg-secondary";
+    }
+  }
+</script>
+

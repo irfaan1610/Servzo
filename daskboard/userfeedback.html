@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>ServZo</title>
+    <link rel="shortcut icon" href="../images/servzoimg/logi.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+ 
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #f8f9fc;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .feedback-card {
+      max-width: 700px;
+      margin: 40px auto;
+      border-radius: 1rem;
+      padding: 30px;
+      box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    .rating-stars i {
+      color: #ccc;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .rating-stars i.active {
+      color: #f6c23e;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .booking-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .booking-card:hover {
+      transform: translateY(-5px);
+    }
+    .badge-status {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+      border-radius: 50px;
+    }
+    .status-confirmed {
+      background-color: #1cc88a;
+      color: white;
+    }
+    .status-pending {
+      background-color: #f6c23e;
+      color: white;
+    }
+    .status-cancelled {
+      background-color: #e74a3b;
+      color: white;
+    }
+     
+    .sidebar {
+      height: 100vh;
+      background-color: #4e73df;
+      padding: 2rem 1rem;
+      color: white;
+      position: fixed;
+      width: 250px;
+    }
+    .sidebar h4 {
+      font-weight: bold;
+    }
+    .sidebar a {
+      color: white;
+      display: block;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      color: #ffc107;
+    }
+    .main {
+      margin-left: 270px;
+      padding: 2rem;
+    }
+    .btn-group .btn {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4 class="mb-4">Servzo</h4>
+    <a href="../Services1.html"><i class="fas fa-list"></i> View Services</a>
+    <a href="userbooking.html"><i class="fas fa-calendar-check"></i> My Bookings</a>
+    <a href="providers.html"><i class="fas fa-calendar-check"></i> Providers</a>
+    <a href="userfeedback.html"><i class="fas fa-star"></i> Feedback</a>
+    <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main container-fluid py-5">
+<div class="feedback-card">
+  <section class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Share Your Feedback</h1>
+    <p class="lead">Help us improve by reviewing your experience</p>
+  </div>
+</section>
+  <form method="post" action="backend/save_feedback.php">
+    <div class="mb-3">
+      <label for="serviceType" class="form-label">Service Used</label>
+      <select class="form-select" id="serviceType" name="service">
+        <option selected disabled>Select service</option>
+        <option value="electrician">Electrician</option>
+        <option value="plumber">Plumber</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="tutor">Tutor</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Rate Your Experience</label>
+      <div class="rating-stars" id="ratingStars">
+        <i class="fas fa-star" data-value="1"></i>
+        <i class="fas fa-star" data-value="2"></i>
+        <i class="fas fa-star" data-value="3"></i>
+        <i class="fas fa-star" data-value="4"></i>
+        <i class="fas fa-star" data-value="5"></i>
+      </div>
+      <input type="hidden" name="rating" id="ratingValue" value="0">
+    </div>
+
+    <div class="mb-3">
+      <label for="feedback" class="form-label">Your Feedback</label>
+      <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="What did you like or dislike?" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+  </form>
+</div>
+</div>
+<footer class="py-3 bg-dark text-white text-center fixed-bottom">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+  // Star Rating Script
+  const stars = document.querySelectorAll('#ratingStars i');
+  const ratingInput = document.getElementById('ratingValue');
+  
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const value = parseInt(star.getAttribute('data-value'));
+      ratingInput.value = value;
+
+      stars.forEach(s => {
+        if (parseInt(s.getAttribute('data-value')) <= value) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+

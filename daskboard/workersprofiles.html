@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <title>ServZo</title>
+    <link rel="shortcut icon" href="../images/servzoimg/logi.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    .header { background: linear-gradient(135deg, #1cc88a, #4e73df); padding: 60px 20px; color: white; text-align: center; }
+    .card-profile { border-radius: 1rem; padding: 30px; background: white; box-shadow: 0 0.15rem 1rem rgba(0,0,0,0.1); }
+ 
+    .sidebar {
+      height: 100vh;
+      background-color: #1cc88a;
+      padding: 2rem 1rem;
+      color: white;
+    }
+    .sidebar h4 {
+      font-weight: bold;
+    }
+    .sidebar a {
+      color: white;
+      display: block;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      color: #ffc107;
+    }
+    .main {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075);
+    }
+    .card i {
+      font-size: 2rem;
+      color: #1cc88a;
+    }
+  </style>
+</head>
+<body>
+  
+<div class="d-flex">
+
+   <div class="sidebar position-fixed">
+    <h4 class="mb-4">Servzo</h4>
+    <a href="workersprofiles.html"><i class="fas fa-user"></i> My Profile</a>
+    <a href="availability.html"><i class="fas fa-calendar-day"></i> Availability</a>
+    <a href="jobrequest.html"><i class="fas fa-briefcase"></i> Job Requests</a>
+    <a href="workersrating.html"><i class="fas fa-chart-line"></i> Ratings</a>
+    <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="main container-fluid py-5">
+    <div class="header">
+    <h1 class="display-5">My Profile</h1>
+    <p>Manage your provider account details</p>
+  </div>
+    <div class="card-profile">
+      <div class="row">
+        <div class="col-md-6">
+          <p><i class="fas fa-user me-2 text-primary"></i><strong>Name:</strong> John Provider</p>
+          <p><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> john@example.com</p>
+          <p><i class="fas fa-phone me-2 text-primary"></i><strong>Phone:</strong> +123456789</p>
+        </div>
+        <div class="col-md-6">
+          <p><i class="fas fa-briefcase me-2 text-success"></i><strong>Business:</strong> John's Electric Co.</p>
+          <p><i class="fas fa-map-marker-alt me-2 text-success"></i><strong>Area:</strong> 15 miles</p>
+          <p><i class="fas fa-tools me-2 text-success"></i><strong>Services:</strong> Electrician, HVAC</p>
+        </div>
+      </div>
+      <div class="text-end mt-4">
+        <button class="btn btn-primary px-4">Edit Profile</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  <footer class="py-3 bg-dark text-white text-center fixed-bottom">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ServZo</title>
+    <link rel="shortcut icon" href="../images/servzoimg/logi.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #f8f9fc;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .booking-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .booking-card:hover {
+      transform: translateY(-5px);
+    }
+    .badge-status {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+      border-radius: 50px;
+    }
+    .status-confirmed {
+      background-color: #1cc88a;
+      color: white;
+    }
+    .status-pending {
+      background-color: #f6c23e;
+      color: white;
+    }
+    .status-cancelled {
+      background-color: #e74a3b;
+      color: white;
+    }
+     
+    .sidebar {
+      height: 100vh;
+      background-color: #4e73df;
+      padding: 2rem 1rem;
+      color: white;
+      position: fixed;
+      width: 250px;
+    }
+    .sidebar h4 {
+      font-weight: bold;
+    }
+    .sidebar a {
+      color: white;
+      display: block;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      color: #ffc107;
+    }
+    .main {
+      margin-left: 270px;
+      padding: 2rem;
+    }
+    .btn-group .btn {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4 class="mb-4">Servzo</h4>
+    <a href="../Services1.html"><i class="fas fa-list"></i> View Services</a>
+    <a href="userbooking.html"><i class="fas fa-calendar-check"></i> My Bookings</a>
+    <a href="providers.html"><i class="fas fa-calendar-check"></i> Providers</a>
+    <a href="userfeedback.html"><i class="fas fa-star"></i> Feedback</a>
+    <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main container-fluid">
+  <section class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold">My Bookings</h1>
+    <p class="lead">Here’s a summary of your service appointments</p>
+  </div>
+</section>
+  <div class="row g-4 py-5">
+
+    <!-- Example Booking Card -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card booking-card p-4">
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-bolt fa-2x text-primary me-3"></i>
+          <div>
+            <h5 class="mb-0">Electrician</h5>
+            <small class="text-muted">Booked on: May 15, 2025</small>
+          </div>
+        </div>
+        <p><strong>Provider:</strong> John Doe</p>
+        <p><strong>Scheduled:</strong> May 20, 2025 at 2:00 PM</p>
+        <span class="badge badge-status status-confirmed">Confirmed</span>
+      </div>
+    </div>
+
+    <!-- Another Example -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card booking-card p-4">
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-utensils fa-2x text-success me-3"></i>
+          <div>
+            <h5 class="mb-0">Home Chef</h5>
+            <small class="text-muted">Booked on: May 10, 2025</small>
+          </div>
+        </div>
+        <p><strong>Provider:</strong> Sarah Khan</p>
+        <p><strong>Scheduled:</strong> May 22, 2025 at 7:00 PM</p>
+        <span class="badge badge-status status-pending">Pending</span>
+      </div>
+    </div>
+
+    <!-- Another Booking -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card booking-card p-4">
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-broom fa-2x text-info me-3"></i>
+          <div>
+            <h5 class="mb-0">House Cleaning</h5>
+            <small class="text-muted">Booked on: April 28, 2025</small>
+          </div>
+        </div>
+        <p><strong>Provider:</strong> CleanCo Services</p>
+        <p><strong>Scheduled:</strong> May 2, 2025 at 11:00 AM</p>
+        <span class="badge badge-status status-cancelled">Cancelled</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<footer class="py-3 bg-dark text-white text-center fixed-bottom">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
