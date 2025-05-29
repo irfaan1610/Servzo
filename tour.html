@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index 06:41:43 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>ServZo</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+   <link rel="shortcut icon" href="images/servzoimg/logi.jpg" type="image/x-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #4e73df;
+      --secondary-color: #1cc88a;
+      --dark-color: #5a5c69;
+      --light-color: #f8f9fc;
+    }
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--primary-color) !important;
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    .btn-secondary {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    .page-header {
+      background: linear-gradient(135deg, rgba(78,115,223,0.9), rgba(28,200,138,0.9));
+      color: white;
+      padding: 60px 0;
+    }
+    .process-step {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+    }
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .faq-item {
+      border-radius: 12px;
+      background-color: white;
+      transition: transform 0.3s ease;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .faq-item:hover {
+      transform: translateY(-3px);
+    }
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+    }
+    .auth-buttons .btn {
+      margin-left: 10px;
+      font-weight: 600;
+    }
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin-top: 10px;
+    }
+    .logo-box-style2 a,.mainmenu-right a,.navigation a{
+            text-decoration: none;
+        }
+  </style>
+  </head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <!-- Start Top Bar style2 -->
+        
+        <!-- End Top Bar style2 -->
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 stricky">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <h1>ServZo</h1>
+                        <!-- <img src="images/servzoimg/logi.jpg" width="50px" alt="Awesome Logo"> -->
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                  <li><a href="index.html">Home</a></li>
+                                 <li><a href="tour.html">Tour</a></li>
+                                 <li><a href="AboutUs1.html">About us</a></li>
+                                 <li><a href="Services1.html">Services</a></li>
+                                 <!-- <li><a href="gallary.html">Gallery</a></li>   -->
+                                <li><a href="contactus.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="mainmenu-right style2">
+                        <div class="button">
+                            <a class="btn-one" href="ServiceProvidersLogin1.html">Go to Workers login<span class="flaticon-next"></span></a>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="CustomerLoginRegister1.html">Go to User login<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">How It Works</h1>
+    <p class="lead">Find, book, and receive services in just a few simple steps</p>
+  </div>
+</section>
+
+<!-- Process for Customers -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-heading text-center mb-5">For Customers</h2>
+    
+    <div class="row g-4">
+      <!-- Step 1 -->
+      <div class="col-lg-4">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">1</div>
+            <h3 class="h4 mb-0">Search for a Service</h3>
+          </div>
+          <p class="text-muted mt-3">Browse our extensive directory of verified service providers or use our search feature to find the specific service you need in your area.</p>
+          <div class="text-center mt-4">
+            <img src="images/servzoimg/sercice.jpg" alt="Search for services" class="img-fluid rounded shadow" />
+          </div>
+          <div class="mt-4">
+            <h5 class="h6">Tips:</h5>
+            <ul class="text-muted">
+              <li>Use specific keywords for better results</li>
+              <li>Filter by location, rating, and price range</li>
+              <li>Check provider profiles for specializations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="col-lg-4">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">2</div>
+            <h3 class="h4 mb-0">Book an Appointment</h3>
+          </div>
+          <p class="text-muted mt-3">Select an available time slot that works for you and book your appointment with just a few clicks. Our streamlined booking process makes scheduling services easy and convenient.</p>
+          <div class="text-center mt-4">
+            <img src="images/servzoimg/servzo (3).jpg" alt="Book an appointment" class="img-fluid rounded shadow" />
+          </div>
+          <div class="mt-4">
+            <h5 class="h6">What you'll need:</h5>
+            <ul class="text-muted">
+              <li>Your preferred date and time</li>
+              <li>Service location details</li>
+              <li>Brief description of the service needed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="col-lg-4">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">3</div>
+            <h3 class="h4 mb-0">Receive & Rate Service</h3>
+          </div>
+          <p class="text-muted mt-3">After your service is completed, you can rate and review your provider, helping others make informed decisions while building a trustworthy community.</p>
+          <div class="text-center mt-4">
+            <img src="images/servzoimg/servzo (4).jpg" alt="Rate the service" class="img-fluid rounded shadow" />
+          </div>
+          <div class="mt-4">
+            <h5 class="h6">Remember to:</h5>
+            <ul class="text-muted">
+              <li>Provide honest, constructive feedback</li>
+              <li>Rate your overall experience</li>
+              <li>Add specific comments about the service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process for Service Providers -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-heading text-center mb-5">For Service Providers</h2>
+    
+    <div class="row g-4">
+      <!-- Step 1 -->
+      <div class="col-lg-3">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">1</div>
+            <h3 class="h4 mb-0">Create Profile</h3>
+          </div>
+          <p class="text-muted mt-3">Sign up and create your professional profile highlighting your skills, experience, and services offered.</p>
+          <ul class="text-muted mt-3">
+            <li>Add professional photos</li>
+            <li>List qualifications</li>
+            <li>Describe services in detail</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="col-lg-3">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">2</div>
+            <h3 class="h4 mb-0">Set Availability</h3>
+          </div>
+          <p class="text-muted mt-3">Define your working hours and manage your calendar to show when you're available to provide services.</p>
+          <ul class="text-muted mt-3">
+            <li>Set regular working hours</li>
+            <li>Block off vacation time</li>
+            <li>Adjust availability in real-time</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="col-lg-3">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">3</div>
+            <h3 class="h4 mb-0">Receive Bookings</h3>
+          </div>
+          <p class="text-muted mt-3">Get notified when customers book your services and manage all appointments from your dashboard.</p>
+          <ul class="text-muted mt-3">
+            <li>Instant booking notifications</li>
+            <li>Customer contact information</li>
+            <li>Service details and requirements</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="col-lg-3">
+        <div class="process-step p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div class="step-number me-3">4</div>
+            <h3 class="h4 mb-0">Grow Your Business</h3>
+          </div>
+          <p class="text-muted mt-3">Provide excellent service, collect positive reviews, and watch your client base grow through our platform.</p>
+          <ul class="text-muted mt-3">
+            <li>Build your reputation</li>
+            <li>Increase visibility in search</li>
+            <li>Access business insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="ServiceProvidersLogin1.html" class="btn btn-primary btn-lg">Join as a Service Provider</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-heading text-center mb-5">Frequently Asked Questions</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="accordion-item border-0 rounded">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  How do I know the service providers are qualified?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  All service providers on our platform undergo a verification process that includes identity verification, credential checks, and reference verification. Additionally, you can view ratings and reviews from previous customers to make informed decisions.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="accordion-item border-0 rounded">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                  What happens if I need to cancel my booking?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can cancel your booking through your account dashboard. Our cancellation policy depends on how much notice you provide. Cancellations made more than 24 hours in advance typically receive a full refund, while last-minute cancellations may incur a small fee to compensate the service provider for their time.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="accordion-item border-0 rounded">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                  How are service prices determined?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Service providers set their own prices based on their experience, qualifications, and market rates. Servzo does not control pricing, but we do provide transparency by showing all costs upfront before you book. Some providers offer fixed rates while others may provide estimates that can be adjusted based on the actual work performed.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="accordion-item border-0 rounded">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                  Is there a fee to join as a service provider?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Basic registration as a service provider is free. We operate on a commission-based model, taking a small percentage of each successfully completed booking. Premium features and enhanced visibility options are available for providers looking to grow their business faster.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <div class="accordion-item border-0 rounded">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                  How does payment work?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We offer secure payment processing through our platform. Customers can pay using credit/debit cards or other supported payment methods. For most services, payment is only released to the service provider after the service has been completed and you confirm your satisfaction, providing an extra layer of protection for customers.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 text-white text-center" style="background-color: rgb(19 0 255) !important;">
+  <div class="container">
+    <h2 class="mb-4">Ready to Get Started?</h2>
+    <p class="lead mb-4">Join thousands of satisfied customers who have simplified their lives with Servzo</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="Services1.html" class="btn btn-light btn-lg">Find Services</a>
+      <a href="ServiceProvidersLogin1.html" class="btn btn-outline-light btn-lg">Become a Provider</a>
+    </div>
+  </div>
+</section>
+
+
+<!--Start footer area Style4-->
+       <footer class="footer-area style3">
+            <div class="container">
+                <div class="row">
+                    <!--Start single footer widget-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s3">
+                            <div class="our-info-box style2">
+                                 <div class="title-style2">
+                                <h3>ServZo</h3>
+                            </div>
+                                <div class="text">
+                                    <p>We are an integrated urban service provider dedicated to simplifying life in the city. Whether it’s a leaking pipe, a faulty AC, or a deep cleaning before your next move, we bring you skilled professionals at the tap of a button. Our goal is to deliver reliable, safe, and affordable services that fit into your busy lifestyle.</p>
+                                    <a class="btn-two more-info-about-company" href="AboutUs1.html">More About Company<span class="flaticon-next"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <!--Start single footer widget-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s3">
+                            <div class="title-style2">
+                                <h3>Usefull Links</h3>
+                            </div>
+                            <div class="usefull-links">
+                                <ul class="float-left">
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <div class="col-md-6">
+                        <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=chennai+(Servzo)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/personal-trackers/">Personl trackers</a></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End footer area Style2-->
+
+        <footer class="py-3 bg-dark text-white text-center mt-auto">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+    </div>
+  </footer>
+
+    </div>
+
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/map-helper.js"></script>
+
+    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <script src="assets/timepicker/timePicker.js"></script>
+    <script src="assets/html5lightbox/html5lightbox.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

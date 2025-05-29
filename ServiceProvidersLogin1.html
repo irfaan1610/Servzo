@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index 06:41:43 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>ServZo</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+   <link rel="shortcut icon" href="images/servzoimg/logi.jpg" type="image/x-icon">
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #1cc88a;
+            --dark-color: #5a5c69;
+            --light-color: #f8f9fc;
+        }
+         .boxed_wrapper{
+             background: linear-gradient(135deg, rgba(78,115,223,0.1) 0%, rgba(28,200,138,0.1) 100%);
+        }
+        /* body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(28,200,138,0.1) 0%, rgba(78,115,223,0.1) 100%);
+            height: 110vh;
+        } */
+        
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3c5ec1;
+            border-color: #3c5ec1;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #17a673;
+            border-color: #17a673;
+        }
+        
+        .login-container {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
+        
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid #e3e6f0;
+            padding: 1.5rem;
+        }
+        
+        .tab-content {
+            padding: 2rem;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+            border-color: #bac8f3;
+        }
+        
+        .social-login-btn {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            font-weight: 600;
+        }
+        
+        .social-login-btn i {
+            margin-right: 10px;
+        }
+        
+        .google-btn {
+            background-color: #fff;
+            color: #757575;
+            border: 1px solid #ddd;
+        }
+        
+        .facebook-btn {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+        }
+        
+        .divider-text {
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .divider-text span {
+            padding: 0 10px;
+            background-color: white;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .divider-text:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .login-illustration {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .nav-tabs .nav-link {
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        #forgotten-password-container {
+            display: none;
+        }
+        
+        .service-checkbox-container {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            padding: 10px;
+        }
+        
+        .service-category {
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .service-category:first-child {
+            margin-top: 0;
+        }
+        .logo-box-style2 a,.mainmenu-right a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+       
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 ">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <h1>ServZo</h1>
+                        <!-- <img src="images/servzoimg/logi.jpg" width="50px" alt="Awesome Logo"> -->
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        </div>
+                    </nav>
+                    <div class="mainmenu-right style2">
+                        <div class="button">
+                            <a class="btn-one" href="index.html">Home<span class="flaticon-next"></span></a>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="ServiceProvidersLogin1.html">Go to Workers login<span class="flaticon-next"></span></a>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="CustomerLoginRegister1.html">Go to User login<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+        <!-- Login Section -->
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Login Tab -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                <div id="login-container">
+                                    <h3 class="text-center mb-4">Service Provider Login</h3>
+                                    <form id="login-form" action="backend/providerlogin.php" method="POST">
+                                        <div class="mb-3">
+                                            <label for="login-email" class="form-label">Email address</label>
+                                            <input type="email" name="loginemail" class="form-control" id="login-email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="login-password" class="form-label">Password</label>
+                                            <input type="password" name="loginpass" class="form-control" id="login-password" required>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="remember-me">
+                                            <label class="form-check-label" for="remember-me">Remember me</label>
+                                            <a href="#" class="float-end" id="forgot-password-link">Forgot password?</a>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary w-100 py-2">Login</button>
+                                    </form>
+                                    
+                                    <div class="divider-text">
+                                        <span>or continue with</span>
+                                    </div>
+                                    
+                                    <div class="social-login">
+                                        <button class="btn social-login-btn google-btn">
+                                            <i class="fab fa-google"></i> Sign in with Google
+                                        </button>
+                                        <button class="btn social-login-btn facebook-btn">
+                                            <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div id="forgotten-password-container">
+                                    <h3 class="text-center mb-4">Reset Password</h3>
+                                    <p class="mb-4">Please enter your email address. We'll send you a link to reset your password.</p>
+                                    <form id="reset-password-form">
+                                        <div class="mb-3">
+                                            <label for="reset-email" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="reset-email" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary w-100 py-2">Send Reset Link</button>
+                                        <button type="button" class="btn btn-link w-100" id="back-to-login">Back to Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <!-- Register Tab -->
+                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <h3 class="text-center mb-4">Create a Provider Account</h3>
+                                <form id="register-form" action="backend/providerregister.php" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="first-name" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" name="firstname" id="first-name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="last-name" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" name="lastname" id="last-name" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="business-name" class="form-label">Business Name (optional)</label>
+                                        <input type="text" class="form-control" name="businessname" id="business-name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" name="email" id="register-email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="register-password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" name="password" id="register-password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" name="confirmpass" id="confirm-password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" name="phone" id="phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Business Address</label>
+                                        <input type="text" class="form-control" name="address" id="address" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="service-area" class="form-label">Service Area (miles)</label>
+                                        <select class="form-select" name="servicearea" id="service-area" required>
+                                            <option value="choose">Select service radius</option>
+                                            <option value="5">5 miles</option>
+                                            <option value="10">10 miles</option>
+                                            <option value="15">15 miles</option>
+                                            <option value="20">20 miles</option>
+                                            <option value="25">25 miles</option>
+                                            <option value="50">50 miles</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Services Offered</label>
+                                        <div class="service-checkbox-container">
+                                            <div class="service-category">Home Maintenance</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="Electrician"  id="electrician">
+                                                <label class="form-check-label" for="electrician">Electrician</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="plumber" id="plumber">
+                                                <label class="form-check-label" for="plumber">Plumber</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="carpenter" id="carpenter">
+                                                <label class="form-check-label" for="carpenter">Carpenter</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="hvac" id="hvac">
+                                                <label class="form-check-label" for="hvac">HVAC Technician</label>
+                                            </div>
+                                            
+                                            <div class="service-category">Cleaning</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="house-cleaning" id="house-cleaning">
+                                                <label class="form-check-label" for="house-cleaning">House Cleaning</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="carpet-cleaning" id="carpet-cleaning">
+                                                <label class="form-check-label" for="carpet-cleaning">Carpet Cleaning</label>
+                                            </div>
+                                            
+                                            <div class="service-category">Education</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="math-tutor" id="math-tutor">
+                                                <label class="form-check-label" for="math-tutor">Math Tutor</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]"  value="language-tutor" id="language-tutor">
+                                                <label class="form-check-label" for="language-tutor">Language Tutor</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="music-teacher" id="music-teacher">
+                                                <label class="form-check-label" for="music-teacher">Music Teacher</label>
+                                            </div>
+                                            
+                                            <div class="service-category">Food</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="personal-chef" id="personal-chef">
+                                                <label class="form-check-label" for="personal-chef">Personal Chef</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="catering" id="catering">
+                                                <label class="form-check-label" for="catering">Catering</label>
+                                            </div>
+                                            
+                                            <div class="service-category">Outdoor</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="gardening" id="gardening">
+                                                <label class="form-check-label" for="gardening">Gardening</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="services[]" value="landscaping" id="landscaping">
+                                                <label class="form-check-label" for="landscaping">Landscaping</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="about" class="form-label">About Your Business</label>
+                                        <textarea class="form-control" id="about" name="about" rows="3" placeholder="Describe your experience, qualifications, and services"></textarea>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="terms" required>
+                                        <label class="form-check-label" for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary w-100 py-2">Create Provider Account</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="text-center">
+                    <img src="images/servzoimg/servzo (4).jpg" alt="Service Provider Illustration" class="login-illustration mb-4">
+                    <h3>Grow Your Business With Us</h3>
+                    <p class="lead">Join thousands of professionals who have expanded their client base through Servzo</p>
+                                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white text-center mt-auto">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle forgot password link
+            document.getElementById('forgot-password-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('forgotten-password-container').style.display = 'block';
+            });
+            
+            // Handle back to login button
+            document.getElementById('back-to-login').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('forgotten-password-container').style.display = 'none';
+                document.getElementById('login-container').style.display = 'block';
+            });
+            
+            
+            document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+    const email = document.getElementById('login-email').value.trim();
+    const pass = document.getElementById('login-password').value.trim();
+
+    if (email === '' || pass === '') {
+      alert('Please fill all fields.');
+      return;
+    }
+
+    fetch('backend/providerlogin.php', {
+      method: 'POST',
+      body: new FormData(this),
+    })
+    .then(response => response.text())
+     .then(data => {
+    alert('Redirecting now...');
+    document.getElementById('login-form').reset();
+    window.location.href = 'daskboard/workersdaskboard.html';
+     })
+    .catch(error => {
+      alert('Error during login.');
+      console.error(error);
+    });
+  });
+
+
+document.getElementById('register-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Collect all values
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const businessName = document.getElementById('business-name').value;
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const serviceArea = document.getElementById('service-area').value;
+    const about = document.getElementById('about').value;
+
+    // Password check
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    // Services
+    const selectedServices = [];
+    const checkboxes = document.querySelectorAll('.service-checkbox-container input[type="checkbox"]:checked');
+    checkboxes.forEach(checkbox => {
+        selectedServices.push(checkbox.id);
+    });
+
+    if (selectedServices.length === 0) {
+        alert('Please select at least one service you offer.');
+        return;
+    }
+
+    // Prepare data
+    const formData = new FormData();
+    formData.append('firstname', firstName);
+formData.append('lastname', lastName);
+formData.append('businessname', businessName);
+formData.append('email', email);
+formData.append('password', password);
+formData.append('phone', phone);
+formData.append('address', address);
+formData.append('servicearea', serviceArea);
+formData.append('about', about);
+//formData.append('services', selectedServices.join(','));
+
+formData.append('services[]', selectedServices); // join array
+
+    // Send to PHP
+    fetch('backend/providerregister.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+    alert('Redirecting now...');
+    document.getElementById('register-form').reset();
+    window.location.href = 'thanks.html';
+})
+    .catch(err => {
+        console.error(err);
+        alert('Registration failed. Please try again.');
+    });
+});
+
+
+
+
+
+            
+            // Handle reset password form submission
+            document.getElementById('reset-password-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('reset-email').value;
+                
+                // In a real app, you would send this to your server
+                console.log('Password reset requested for:', email);
+                
+                // For demo purposes, show success message
+                alert('Password reset link has been sent to your email!');
+                
+                // Switch back to login
+                document.getElementById('back-to-login').click();
+            });
+        });
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/map-helper.js"></script>
+
+    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <script src="assets/timepicker/timePicker.js"></script>
+    <script src="assets/html5lightbox/html5lightbox.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <script src="js/custom.js"></script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index 06:41:43 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>ServZo</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+   <link rel="shortcut icon" href="images/servzoimg/logi.jpg" type="image/x-icon">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" /> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #4e73df;
+      --secondary-color: #1cc88a;
+      --dark-color: #5a5c69;
+      --light-color: #f8f9fc;
+    }
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--primary-color) !important;
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    .btn-secondary {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    .page-header {
+      background: linear-gradient(135deg, rgba(78,115,223,0.9), rgba(28,200,138,0.9));
+      color: white;
+      padding: 60px 0;
+    }
+    .process-step {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+    }
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .faq-item {
+      border-radius: 12px;
+      background-color: white;
+      transition: transform 0.3s ease;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .faq-item:hover {
+      transform: translateY(-3px);
+    }
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+    }
+    .auth-buttons .btn {
+      margin-left: 10px;
+      font-weight: 600;
+    }
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin-top: 10px;
+    }
+    .logo-box-style2 a,.mainmenu-right a,.navigation a{
+            text-decoration: none;
+        }
+  </style>
+  </head>
+
+<body>
+    <div class="boxed_wrapper">
+
+        <div class="preloader"></div>
+
+        <!-- Start Top Bar style2 -->
+        
+        <!-- End Top Bar style2 -->
+
+        <!--Start Main Header-->
+        <header class="main-header header-style2 ">
+            <div class="inner-container clearfix">
+                <div class="logo-box-style2 float-left">
+                    <a href="index.html">
+                        <h1>ServZo</h1>
+                        <!-- <img src="images/servzoimg/logi.jpg" width="50px" alt="Awesome Logo"> -->
+                    </a>
+                </div>
+                <div class="main-menu-box float-right">
+                    <nav class="main-menu style2 clearfix">
+                        <div class="navbar-header clearfix">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                  <li><a href="index.html">Home</a></li>
+                                 <li><a href="tour.html">Tour</a></li>
+                                 <li><a href="AboutUs1.html">About us</a></li>
+                                 <li><a href="Services1.html">Services</a></li>
+                                 <!-- <li><a href="gallary.html">Gallery</a></li>   -->
+                                <li><a href="contactus.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="mainmenu-right style2">
+                        <div class="button">
+                            <a class="btn-one" href="ServiceProvidersLogin1.html">Go to Workers login<span class="flaticon-next"></span></a>
+                        </div>
+                        <div class="button">
+                            <a class="btn-one" href="CustomerLoginRegister1.html">Go to User login<span class="flaticon-next"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--End Main Header-->
+
+
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Our Services</h1>
+    <p class="lead">Discover the wide range of professional services available on our platform</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-heading text-center mb-5">Our Service Categories</h2>
+    
+    <div class="row g-4">
+      <!-- Home Services -->
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Electricians services</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Electrical Services – Wiring, fan installation, lighting solutions.
+
+Plumbing Services – Leak repairs, pipe installation, drainage unclogging.
+
+Appliance Repair – AC servicing, washing machine repair, refrigerator fix.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Plumbing Services</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Plumbing Services – Leak repairs, pipe installation, drainage unclogging.
+
+Appliance Repair – AC servicing, washing machine repair, refrigerator fix.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Home Tuition Tailored to Your Needs</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      We are a team of passionate educators committed to delivering quality education through home-based tutoring. 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Deliciously Crafted, Personally Served</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     We are a team of food enthusiasts, chefs, and nutrition experts who believe great meals can make ordinary moments unforgettable. Whether you need a weekly meal prep, want to learn cooking, or plan to impress guests with gourmet catering, we provide personal, fresh, and flavorful food experiences.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-home service-icon me-3"></i>
+            <h3 class="h4 mb-0">Home Services</h3>
+          </div>
+          
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-bolt me-2 text-primary"></i> Electricians</span>
+                <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">View</a>
+              </div>
+            </li>
+            
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-wrench me-2 text-primary"></i> Plumbers</span>
+                <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@fat">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-hammer me-2 text-primary"></i> Carpenters</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-broom me-2 text-primary"></i> Cleaning Services</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-paint-roller me-2 text-primary"></i> Painters</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Educational Services -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-graduation-cap service-icon me-3"></i>
+            <h3 class="h4 mb-0">Educational</h3>
+          </div>
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-book me-2 text-primary"></i> Private Tutors</span>
+                <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-language me-2 text-primary"></i> Language Teachers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-music me-2 text-primary"></i> Music Instructors</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-code me-2 text-primary"></i> Coding Teachers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-paint-brush me-2 text-primary"></i> Art Instructors</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Food & Culinary -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-utensils service-icon me-3"></i>
+            <h3 class="h4 mb-0">Food & Culinary</h3>
+          </div>
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-user-chef me-2 text-primary"></i> Personal Chefs</span>
+               <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@fat">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-birthday-cake me-2 text-primary"></i> Bakers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-glass-cheers me-2 text-primary"></i> Bartenders</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-capsules me-2 text-primary"></i> Nutritionists</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-pizza-slice me-2 text-primary"></i> Catering Services</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Health & Wellness -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-heartbeat service-icon me-3"></i>
+            <h3 class="h4 mb-0">Health & Wellness</h3>
+          </div>
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-spa me-2 text-primary"></i> Yoga Instructors</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-dumbbell me-2 text-primary"></i> Personal Trainers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-hands me-2 text-primary"></i> Massage Therapists</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-medkit me-2 text-primary"></i> Home Healthcare</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-brain me-2 text-primary"></i> Meditation Coaches</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Tech Support -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-laptop service-icon me-3"></i>
+            <h3 class="h4 mb-0">Tech Support</h3>
+          </div>
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-desktop me-2 text-primary"></i> Computer Repair</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-wifi me-2 text-primary"></i> Network Setup</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-mobile-alt me-2 text-primary"></i> Phone Repair</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-camera me-2 text-primary"></i> Smart Home Setup</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-virus-slash me-2 text-primary"></i> Virus Removal</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Events & Entertainment -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-category p-4 h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-glass-cheers service-icon me-3"></i>
+            <h3 class="h4 mb-0">Events & Entertainment</h3>
+          </div>
+          <ul class="list-unstyled mt-4">
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-camera me-2 text-primary"></i> Photographers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-music me-2 text-primary"></i> Musicians/DJs</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-calendar-check me-2 text-primary"></i> Event Planners</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3 mb-2">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-theater-masks me-2 text-primary"></i> Performers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+            <li class="service-item p-3">
+              <div class="d-flex justify-content-between">
+                <span><i class="fas fa-video me-2 text-primary"></i> Videographers</span>
+                <a href="#" class="text-decoration-none">View</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Become a provider CTA -->
+<section class="py-5 text-white text-center" style="background-color: rgb(19 0 255) !important;">
+  <div class="container">
+    <h2 class="mb-4">Offer Your Services on Our Platform</h2>
+    <p class="lead mb-4">Join thousands of professionals who are growing their business with Servzo</p>
+    <a href="ServiceProvidersLogin1.html" class="btn btn-light btn-lg px-4">Become a Provider</a>
+  </div>
+</section>
+
+<!--Start footer area Style4-->
+      <footer class="footer-area style3">
+            <div class="container">
+                <div class="row">
+                    <!--Start single footer widget-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s3">
+                            <div class="our-info-box style2">
+                                 <div class="title-style2">
+                                <h3>ServZo</h3>
+                            </div>
+                                <div class="text">
+                                    <p>We are an integrated urban service provider dedicated to simplifying life in the city. Whether it’s a leaking pipe, a faulty AC, or a deep cleaning before your next move, we bring you skilled professionals at the tap of a button. Our goal is to deliver reliable, safe, and affordable services that fit into your busy lifestyle.</p>
+                                    <a class="btn-two more-info-about-company" href="AboutUs1.html">More About Company<span class="flaticon-next"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <!--Start single footer widget-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="single-footer-widget marbtm50-s3">
+                            <div class="title-style2">
+                                <h3>Usefull Links</h3>
+                            </div>
+                            <div class="usefull-links">
+                                <ul class="float-left">
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                    <li><a href="#">Partners</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End single footer widget-->
+                    <div class="col-md-6">
+                        <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=chennai+(Servzo)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/personal-trackers/">Personl trackers</a></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End footer area Style2-->
+
+        <footer class="py-3 bg-dark text-white text-center mt-auto">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Servzo. All rights reserved.</p>
+    </div>
+  </footer>
+
+    </div>
+
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.bootstrap-touchspin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/map-helper.js"></script>
+
+    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <script src="assets/timepicker/timePicker.js"></script>
+    <script src="assets/html5lightbox/html5lightbox.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
